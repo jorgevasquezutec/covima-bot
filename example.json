@@ -1,0 +1,29 @@
+{
+  "ctx": {
+    "body:": {
+      "key": {
+        "remoteJid": "51940xxx758@s.whatsapp.net",
+        "fromMe": false,
+        "id": "3AD1CB5BE942D6xxxx",
+        "participant": null
+      },
+      "messageTimestamp": 174690000,
+      "pushName": "Jorge Luis xxxxx",
+      "broadcast": false,
+      "message": {
+        "conversation": "yes",
+        "messageContextInfo": {
+          "deviceListMetadata": {
+            "devices": "Array or details here"
+          },
+          "deviceListMetadataVersion": 2,
+          "messageSecret": ""
+        }
+      },
+      "body": "yes",
+      "name": "Jorge Luis xxxxx",
+      "from": "51940xxxx",
+      "host": "51941xxxx"
+    }
+  }
+}
