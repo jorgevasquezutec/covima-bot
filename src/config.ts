@@ -8,5 +8,5 @@ export const config = {
     SPREADSHEET_ID: process.env.SPREADSHEET_ID || '1g0v2x4q3r4g3g3g3g3g3g3g3g3g3g3g3g3g3g',
     GOOGLE_KEY_JSON_PATH: process.env.GOOGLE_KEY_JSON_PATH || './google.json',
     REGISTRO_SHEET: process.env.REGISTRO_SHEET || 'Asistencia',
-    ACTIVIDADES_SHEET: process.env.ACTIVIDADES_SHEET || 'Actividades'
+    ACTIVIDADES_SHEET: process.env.ACTIVIDADES_SHEET || 'Actividades',
 }

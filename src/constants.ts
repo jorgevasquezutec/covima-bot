@@ -1,6 +1,4 @@
 import { TipoAsistencia } from "./models"
-// import { executeSimple,executeMCFlow } from "./flow"
-
 
 export const options = ['ma', 'mc', 'gp', 'd13', 'salir']
 export const boleanOption = ['si', 'no']
@@ -17,4 +15,16 @@ export const OptionsText = Object.entries(mapTipoDescripcion)
     .map(([key, value]) => `*${key.toLowerCase()}* - ${value}`)
 
 
-
+export const MAP_MA_ROL = {
+    'Bienvenida': 'Bienvenida',
+    'OracionInicial': 'Oración Inicial',
+    'EspacioDeCantos': 'Espacio de Cantos',
+    'OracionIntercesora': 'Oración Intercesora',
+    'NotiJoven': 'NotiJoven',
+    'Dinamica': 'Dinámica',
+    'Reavivados': 'Reavivados',
+    'Especial': 'Especial',
+    'Tema': 'Tema',
+    'HimnoFinal': 'Himno Final',
+    'OracionFinal': 'Oración Final', 
+}

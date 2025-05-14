@@ -32,15 +32,15 @@ export const valid = async (tipo: TipoAsistencia, phone: string): Promise<string
 
     const errores: string[] = []
 
-    const actividad = actividadesMap.get(tipo)
-    if (!enableToRegister(actividadesMap, tipo)) {
-        if (actividad) {
-            errores.push(`No puedes registrar tu asistencia a ${mapTipoDescripcion[tipo]} *(${tipo})*  en este momento. *El horario es los dias ${actividad.dias.map(i => diasSemana[i - 1])} de ${formato12Horas(actividad.hora_inicio)} a ${formato12Horas(actividad.hora_fin)}*`)
-        } else {
-            errores.push(`No se encontró configuración horaria para ${tipo}.`)
-        }
-        return errores
-    }
+    // const actividad = actividadesMap.get(tipo)
+    // if (!enableToRegister(actividadesMap, tipo)) {
+    //     if (actividad) {
+    //         errores.push(`No puedes registrar tu asistencia a ${mapTipoDescripcion[tipo]} *(${tipo})*  en este momento. *El horario es los dias ${actividad.dias.map(i => diasSemana[i - 1])} de ${formato12Horas(actividad.hora_inicio)} a ${formato12Horas(actividad.hora_fin)}*`)
+    //     } else {
+    //         errores.push(`No se encontró configuración horaria para ${tipo}.`)
+    //     }
+    //     return errores
+    // }
 
     const key = `${fecha}-${tipo}-${phone}`
     if (asistenciasMap.has(key)) {

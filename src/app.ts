@@ -7,7 +7,11 @@ import {
     executeMCFlow,
     executeSimple,
     exitFlow,
-    registerFlow
+    registerFlow,
+    generalFlow,
+    localtionFlow,
+    voiceFlow,
+    
 } from './flow'
 import { adapterDB } from './database'
 import { adapterProvider } from './provider'
@@ -17,12 +21,15 @@ const PORT = config.PORT ?? 3008
 
 const main = async () => {
     const adapterFlow = createFlow([
+        generalFlow,
         welcomeFlow,
         validationFlow,
         executeSimple,
         executeMCFlow,
         registerFlow,
-        exitFlow
+        exitFlow,
+        voiceFlow,
+        localtionFlow,
     ])
     const { handleCtx, httpServer } = await createBot({
         flow: adapterFlow,

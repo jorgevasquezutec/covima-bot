@@ -1,9 +1,12 @@
-import { addKeyword } from '@builderbot/bot'
+import { addKeyword,EVENTS } from '@builderbot/bot'
 import { OptionsText,options } from '~/constants'
 import { exitFlow } from './exit.flow'
 import { registerFlow } from './register.flow'
+// import contextLayer from '~/layers/contex.layer'
 
 
+// export const welcomeFlow = addKeyword(EVENTS.WELCOME)
+// .addAction(contextLayer)
 
 export const welcomeFlow = addKeyword(['hi', 'hello', 'hola', 'Hola', 'Holi', 'oli', 'registar'])
     .addAnswer(`🙌 Bievenido a *CovimaBot*
@@ -18,6 +21,7 @@ export const welcomeFlow = addKeyword(['hi', 'hello', 'hola', 'Hola', 'Holi', 'o
         { delay: 800, capture: true },
         async (ctx, { fallBack, gotoFlow, endFlow }) => {
             const option = ctx.body.toLocaleLowerCase().trim()
+            // console.log('option', option)
             if (!options.includes(option)) {
                 return fallBack('Tiene que ingresar *ma*, *mc*, *gp* o *d13* o *salir*')
             }
